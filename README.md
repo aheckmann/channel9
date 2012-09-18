@@ -1,7 +1,13 @@
 #channel9
 ==========
 
-This is the source for this [channel 9 demo](http://channel9.msdn.com/Blogs/Interoperability/Nodejs-and-MongoDB-on-Windows-Azure).
+This is the source from this [channel 9 demo](http://channel9.msdn.com/Blogs/Interoperability/Nodejs-and-MongoDB-on-Windows-Azure).
+
+----------------
+
+![](https://dl.dropbox.com/u/11198966/channel9.png)
+
+----------------
 
 ## installation
 
