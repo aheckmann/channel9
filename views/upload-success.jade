@@ -1,0 +1,16 @@
+
+h2 Upload successful
+ul
+  each file in files
+    li
+      dl
+        each val, prop in file
+          - if (file.hasOwnProperty(prop))
+            dt= prop
+            dd
+              if ('id' == prop || 'name' == prop)
+                a(href='/play/' + file.id)= file.id
+              else
+                = val
+
+a(href='/') upload another

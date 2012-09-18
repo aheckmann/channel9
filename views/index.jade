@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .home
+    .banner
+      form(action="/", enctype="multipart/form-data", method="post")
+        p Upload an image
+        p
+          input(type="file", name="upload")
+        p
+          input(type="submit", value="upload!")
+
+    ul.inline
+      each doc in docs
+        li.link
+          a(href="/play/" + doc._id)
+            img(src= "/image/" + doc._id, title= doc.filename)

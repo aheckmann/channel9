@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  .play
+    h2
+      | Have fun editing
+      = (doc.filename ? ' ' + doc.filename : '') + '!'
+    .left
+      p
+        a#home(href="/") home
+      p
+        ul
+          li
+            label implode
+            input.edit(name="implode", value=implode)
+          li
+            label contrast
+            input.edit(name="contrast", value=contrast)
+          li
+            label sepia
+            input.edit(type='checkbox', name="sepia", checked=sepia && "checked")
+          li
+            label red
+            input.edit.color(name="colorize", value=colorize[0])
+          li
+            label green
+            input.edit.color(name="colorize", value=colorize[1])
+          li
+            label blue
+            input.edit.color(name="colorize", value=colorize[2])
+          li
+            label swirl
+            input.edit.swirl(name="swirl", value=swirl)
+          li
+            label crop
+            input.edit.crop(name="crop", placeholder="width", value=crop[0])
+            input.edit.crop(name="crop", placeholder="height", value=crop[1])
+            input.edit.crop(name="crop", placeholder="x-offset", value=crop[2])
+            input.edit.crop(name="crop", placeholder="y-offset", value=crop[3])
+          li
+            label blur
+            input.edit.blur(name="blur", value=blur)
+          li
+            label charcoal
+            input.edit(name="charcoal", value=charcoal)
+          li
+            label emboss
+            input.edit(name="emboss", value=emboss)
+          li.rotate
+            label rotate
+            input.edit.rotate(id="rotate-0", name="rotate", type="radio", value="", checked=!rotate ? "checked" : false)
+            label.sub(for="rotate-0") 0º 
+            input.edit.rotate(id="rotate-90", name="rotate", type="radio", value="90", checked="90"==rotate ? "checked" : false)
+            label.sub(for="rotate-90") 90º 
+            input.edit.rotate(id="rotate-180", name="rotate", type="radio", value="180", checked="180"==rotate ? "checked" : false)
+            label.sub(for="rotate-180") 180º 
+            input.edit.rotate(id="rotate-270", name="rotate", type="radio", value="270", checked="270"==rotate ? "checked" : false)
+            label.sub(for="rotate-270") 270º 
+      p
+        .linkify
+          button#makelink linkify
+          input#linkified
+          span.msg
+            | Paste link in 
+            strong email
+            |  or 
+            strong IM
+    img#img(src="/edit/" + doc._id, data-id= String(doc._id))
+    script(src="/js/jquery-1.8.1.min.js")
+    script(src="/js/edit.js")

@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font: 14px/1.6 "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.home {
+  overflow: hidden;
+}
+
+.home .inline {
+  padding: 0;
+  margin: 0;
+  width: 1500px;
+}
+
+ul.inline li {
+  display: inline;
+  float: left;
+}
+
+.home .inline li {
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.link a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+}
+.link a:hover {
+  opacity: 0.8;
+}
+
+.home, .home .banner {
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.home .banner {
+  position: absolute;
+  background-color: #FFD5A1;
+  border-bottom: 1px solid #F5B970;
+  box-shadow: 0 0 7px;
+}
+
+.home .banner form {
+  width: 600px;
+  margin: 0 auto;
+}
+.home .banner form p {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.play {
+  margin: 20px;
+}
+.play .left {
+  float: left;
+  margin-right: 20px;
+}
+.play ul li {
+  list-style: none;
+}
+.play ul li label {
+  width: 65px;
+  display: inline-block;
+}
+
+.play input.edit {
+  width: 50px;
+  margin: 0 2px;
+}
+.play input.rotate {
+  width: 10px;
+}
+.play li.rotate .sub {
+  display: inline;
+  width: auto;
+}
+
+.play .linkify {
+  width: 200px;
+  height: 40px;
+}
+.linkify .msg {
+  display: none;
+}

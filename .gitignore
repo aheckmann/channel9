@@ -1,0 +1,6 @@
+*.sw*
+node_modules/
+azure_error
+.notes
+setup
+iisnode.yml
